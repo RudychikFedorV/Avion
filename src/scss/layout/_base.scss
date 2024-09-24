@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin-inline: auto;
+}
+.py-60 {
+  padding: 60px 0;
+}
+.text-center {
+  text-align: center;
+}
+.d-flex {
+  display: flex;
+}
+.btns {
+  display: block;
+  font: var(--txt-400-16-150-ff);
+  padding: 16px 32px;
+  width: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+  }
+  &:active {
+    color: var(--c-color-active);
+  }
+}
+.btn-1 {
+  max-width: 170px;
+  color: var(--white);
+  background-color: var(--c-background-btn-1);
+  &:hover {
+    background-color: var(--white);
+    color: var(--c-color-1);
+  }
+}
+.btn-2 {
+  max-width: 170px;
+  color: var(--dark-primary);
+  background-color: var(--light-grey);
+  &:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+.btn-3 {
+  max-width: 120px;
+  color: var(--white);
+  background-color: var(--dark-primary);
+  &:hover {
+    background-color: var(--c-color-1);
+  }
+}
+.btn-4 {
+  max-width: 120px;
+  background-color: var(--white);
+  color: var(--dark-primary);
+  &:hover {
+    color: var(--white);
+    background-color: var(--primary);
+  }
+}

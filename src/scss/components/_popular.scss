@@ -1,0 +1,19 @@
+.popular {
+  &-row {
+    display: flex;
+    gap: 20px;
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  .products-item {
+    @include tablet {
+      &:nth-child(2n) {
+        width: calc(50% - 10px);
+      }
+      &:nth-child(3n) {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+}

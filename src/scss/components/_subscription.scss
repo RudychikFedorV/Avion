@@ -1,0 +1,40 @@
+.subscription {
+  background-color: var(--light-grey);
+  &-row {
+    background-color: var(--white);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &-title {
+    font: var(--txt-400-36-140-sf);
+    color: var(--dark-primary);
+    margin-bottom: 15px;
+  }
+  &-desc {
+    font: var(--txt-400-16-150-ff);
+    color: var(--dark-primary);
+    margin-bottom: 70px;
+  }
+  &-form {
+    display: flex;
+    max-width: 472px;
+    width: 100%;
+    input {
+      background-color: var(--light-grey);
+      max-width: 354px;
+      width: 100%;
+      padding: 15px 30px;
+      border: none;
+
+      font: var(--txt-400-16-100-ff);
+      color: var(--dark-primary);
+      &::placeholder {
+        font: var(--txt-400-16-100-ff);
+        color: var(--c-color-2);
+      }
+    }
+  }
+}

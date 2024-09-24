@@ -1,0 +1,35 @@
+:root {
+  --font-family: "Satoshi", sans-serif;
+  --second-family: "Clash Display", sans-serif;
+  --transition: 0.2s all ease-in-out;
+
+  --dark-primary: #2a254b;
+  --primary: #4e4d93;
+  --light-grey: #f9f9f9;
+  --border-grey: #ebe8f4;
+  --white: #fff;
+  --border-dark: #cac6da;
+  --images---dark-chair: #f6f6f6;
+  --c-color-active: #07590aee;
+  --c-color-1: #726e8d;
+  --c-color-2: rgba(42, 37, 75, 0.2);
+  --c-color-3: #505977;
+  --c-color-4: rgba(255, 255, 255, 0.15);
+  --c-background-btn-1: rgba(249, 249, 249, 0.15);
+  --c-box-shadow: 0 102px 124px 0 rgba(0, 0, 0, 0.25);
+
+  --txt-400-36-140-sf: 400 36px / 140% var(--second-family);
+  --txt-400-32-140-sf: 400 32px / 140% var(--second-family);
+  --txt-400-32-100-sf: 400 32px / 100% var(--second-family);
+  --txt-400-24-140-sf: 400 24px / 140% var(--second-family);
+  --txt-400-20-140-sf: 400 20px / 140% var(--second-family);
+  --txt-400-16-100-sf: 400 16px / 100% var(--second-family);
+
+  --txt-400-18-150-ff: 400 18px / 150% var(--font-family);
+  --txt-400-16-150-ff: 400 16px / 150% var(--font-family);
+  --txt-400-16-100-ff: 400 16px / 100% var(--font-family);
+  --txt-400-14-100-ff: 400 14px / 100% var(--font-family);
+
+  --outline: 2px dashed currentColor;
+  --outline-offset: 3px;
+}
