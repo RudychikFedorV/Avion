@@ -1,0 +1,22 @@
+.hero {
+  background-color: var(--white);
+  &-row {
+    padding: 80px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    &-left {
+      &__title {
+        font: var(--txt-400-36-140-sf);
+        color: var(--dark-primary);
+      }
+    }
+    &-right {
+      &__btn {
+        max-width: 192px;
+      }
+    }
+  }
+}

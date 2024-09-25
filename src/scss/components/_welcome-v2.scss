@@ -1,0 +1,21 @@
+.welcome-v2 {
+  &-row {
+    gap: 16px;
+  }
+  .welcome-left {
+    max-width: 634px;
+    width: 100%;
+  }
+  .welcome-right {
+    max-width: 630px;
+    width: 100%;
+  }
+ 
+  .welcome-left__desc {
+    margin-top: 0;
+    margin-bottom: auto;
+  }
+  .welcome-left__btn {
+    margin-bottom: inherit;
+  }
+}

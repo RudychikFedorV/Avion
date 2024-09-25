@@ -49,7 +49,6 @@ body {
   }
 }
 .btn-2 {
-  max-width: 170px;
   color: var(--dark-primary);
   background-color: var(--light-grey);
   &:hover {
@@ -73,4 +72,7 @@ body {
     color: var(--white);
     background-color: var(--primary);
   }
+}
+.close-hidden {
+  display: none;
 }

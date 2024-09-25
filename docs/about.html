@@ -5,12 +5,36 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Avion</title>
+	<title>About</title>
 	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
 
+	<section class="header-delivery" id="headerDelivery">
+    <div class="container">
+        <div class="header-delivery-row">
+            <div class="header-delivery-left">
+                <div class="header-delivery-left__img">
+                    <img src="img/header/delivery.svg" alt="Icon">
+                </div>
+                <p class="header-delivery-left__desc">Free delivery on all orders over £50 with code easter checkout</p>
+            </div>
+            <div class="header-delivery-right" id="closeDelivery">
+                <img src="img/header/close.svg" alt="Icon">
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const headerDelivery = document.querySelector('#headerDelivery')
+    if (headerDelivery) {
+        const closeDelivery = headerDelivery.querySelector('#closeDelivery')
+        closeDelivery.addEventListener('click', () => {
+            headerDelivery.classList.add('close-hidden')
+        })
+    }
+</script>
 	<header class="header">
 	<div class="header-top">
 		<div class="header-top__left">
@@ -77,26 +101,61 @@
 	</div>
 </header>
 	<main class="main">
-		<section class="welcome py-60">
+		<section class="hero">
     <div class="container">
-        <div class="welcome-row d-flex">
+        <div class="hero-row">
+            <div class="hero-left">
+                <h2 class="hero-left__title">A brand built on the love of craftmanship,<br>
+                    quality and outstanding customer service
+                </h2>
+            </div>
+            <div class="hero-right">
+                <a href="#!" class="hero-right__btn btns btn-2">View our products</a>
+            </div>
+        </div>
+    </div>
+</section>
+		<section class="welcome welcome-v2 py-60">
+    <div class="container">
+        <div class="welcome-v2-row d-flex">
             <div class="welcome-left">
-                <h2 class="welcome-left__title">The furniture brand for the future, with timeless designs</h2>
-                <a href="#!" class="welcome-left__btn btns btn-1">View collection</a>
-                <p class="welcome-left__desc">A&nbsp;new era in&nbsp;eco friendly furniture with Avelon, the French luxury retail brand
-                    with nice fonts, tasteful colors and a&nbsp;beautiful way to&nbsp;display things digitally
-                    using modern web technologies.
+                <h2 class="welcome-left__title">It started with a small idea</h2>
+                <p class="welcome-left__desc">A global brand with local beginnings, our story begain in a small studio
+                    in South London in early 2014
                 </p>
+                <a href="#!" class="welcome-left__btn btns btn-1">View collection</a>
             </div>
             <div class="welcome-right">
                 <div class="welcome-right__img">
-                    <img src="img/welcome/welcome-banner.png" alt="Banner" srcset="img/welcome/welcome-banner_2x.png 2x">
+                    <img src="img/welcome-v2/v2.png" alt="Banner"
+                        srcset="img/welcome-v2/v2_2x.png 2x">
                 </div>
             </div>
         </div>
     </div>
 </section>
-		<section class="benefits py-60">
+		<div class="about about-v2">
+    <div class="container">
+        <div class="about-row d-flex">
+            <div class="about-left">
+                <h3 class="about-left__title">From a studio in London to a global brand with over 400 outlets</h3>
+                <p class="about-left__desc">When we started Avion, the idea was simple. Make high quality furniture
+                    affordable and available for the mass market. <br><br>
+                    Handmade, and lovingly crafted furniture and homeware is what we live,
+                    breathe and design so our Chelsea boutique become the hotbed for the London interior design
+                    community.
+                </p>
+                <a href="#!" class="about-left__btn btns btn-2">Get in touch</a>
+            </div>
+            <div class="about-right">
+                <div class="about-right__img">
+                    <img src="img/about/image.png" alt="Image" srcset="img/about/image_2x.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+		<section class="benefits benefits-v2 py-60">
     <div class="container">
         <h3 class="benefits-title text-center">What makes our brand different</h3>
         <div class="benefits-row">
@@ -131,70 +190,6 @@
         </div>
     </div>
 </section>
-		<section class="products">
-    <div class="container">
-        <h2 class="products-title">New ceramics</h2>
-        <div class="products-row">
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-01.jpg" alt="Image" srcset="img/products/new-01_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-02.jpg" alt="Image" srcset="img/products/new-02_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-03.jpg" alt="Image" srcset="img/products/new-03_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-04.jpg" alt="Image" srcset="img/products/new-04_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-        </div>
-        <a href="#!" class="products-btn btns btn-2">View collection</a>
-    </div>
-</section>
-		<section class="popular">
-    <div class="container">
-        <h2 class="products-title">Our popular products</h2>
-        <div class="popular-row">
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/popular/our-01.png" alt="Image" srcset="img/popular/our-01_2x.png">
-                </div>
-                <a href="#!" class="products-item__name">The Poplar suede sofa</a>
-                <p class="products-item__price">£950</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-01.jpg" alt="Image" srcset="img/products/new-01_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/popular/our-03.png" alt="Image" srcset="img/popular/our-03_2x.png">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-        </div>
-    </div>
-</section>
 		<section class="subscription py-60">
     <div class="container">
         <div class="subscription-row">
@@ -209,28 +204,6 @@
         </div>
     </div>
 </section>
-		<div class="about">
-    <div class="container">
-        <div class="about-row d-flex">
-            <div class="about-left">
-                <h3 class="about-left__title">Our service isn’t just personal, it’s actually
-                    hyper personally exquisite
-                </h3>
-                <p class="about-left__desc">When we started Avion, the idea was simple. Make high quality furniture
-                    affordable and available for the mass market.<br><br>
-                    Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our
-                    Chelsea boutique become the hotbed for the London interior design community.
-                </p>
-                <a href="about.html" class="about-left__btn btns btn-2">View collection</a>
-            </div>
-            <div class="about-right">
-                <div class="about-right__img">
-                    <img src="img/about-v2/v2.png" alt="Image" srcset="img/about-v2/v2_2x.png">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 	</main>
 	<footer class="footer">
 	<div class="container">

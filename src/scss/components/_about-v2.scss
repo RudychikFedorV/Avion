@@ -1,0 +1,13 @@
+.about-v2 {
+  .about-row {
+    flex-direction: row-reverse;
+  }
+  .about-left {
+    padding-left: 60px;
+    background-color: var(--light-grey);
+  }
+  .btn-2 {
+    border: 1px solid var(--dark-primary);
+    max-width: 160px;
+  }
+}
