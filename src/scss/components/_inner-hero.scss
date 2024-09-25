@@ -1,0 +1,18 @@
+.inner-hero {
+  background-image: url(../img/inner-hero/bg.jpg);
+  height: 209px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &-row {
+    position: relative;
+    height: 209px;
+  }
+  &-title {
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    font: var(--txt-400-36-140-sf);
+    color: var(--white);
+  }
+}
