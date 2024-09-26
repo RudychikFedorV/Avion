@@ -1,0 +1,105 @@
+<section class="product">
+    <div class="container">
+        <h2 class="visually-hidden">Product</h2>
+        <div class="product-row">
+            <div class="product-left">
+                <div class="product-left__img">
+                    <img src="img/product/01.png" alt="Image" srcset="img/product/01_2x.png" width="607" height="661">
+                </div>
+            </div>
+            <div class="product-right">
+                <div class="product-top">
+                    <h2 class="product-top__title">The Dandy Chair</h2>
+                    <span class="product-top__price">£250</span>
+                </div>
+                <div class="product-body">
+                    <h3 class="product-body__title">Product description</h3>
+                    <p class="product-body__desc">A timeless design, with premium materials features as one of our most
+                        popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech
+                        legs and lambskin leather upholstery.
+                    </p>
+                    <h4 class="product-body__name">Dimensions</h4>
+                    <div class="product-body__block">
+                        <div class="product-body__item">
+                            <p class="product-body__item-txt1">Height</p>
+                            <p class="product-body__item-txt2">110cm</p>
+                        </div>
+                        <div class="product-body__item">
+                            <p class="product-body__item-txt1">Width</p>
+                            <p class="product-body__item-txt2">75cm</p>
+                        </div>
+                        <div class="product-body__item">
+                            <p class="product-body__item-txt1">Depth</p>
+                            <p class="product-body__item-txt2">50cm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-bottom">
+                    <h3 class="product-bottom__name">Quantitity</h3>
+                    <div class="product-bottom__stepper stepper">
+                        <button class="product-bottom__stepper-btn btn--minus stepper-btn--disabled"
+                            aria-label="Decrease quantity">-</button>
+                        <input type="namber" value="1" min="1" max="999" class="stepper-input">
+                        <button class="product-bottom__stepper-btn btn--plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="product-bottom__btns">
+                        <a href="#!" class="btns btn-3">Add to cart</a>
+                        <a href="#!" class="btns btn-4">Save to favorites</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const stepperEl = document.querySelector('.stepper')
+
+    if (stepperEl) {
+        const stepperInputEl = document.querySelector('.stepper-input')
+        const stepperMinusEl = document.querySelector('.btn--minus')
+        const stepperPlusEl = document.querySelector('.btn--plus')
+        const stepperMin = Number(stepperInputEl.getAttribute('min'));
+        const stepperMax = Number(stepperInputEl.getAttribute('max'));
+        let count = Number(stepperInputEl.value);
+
+        stepperInputEl.addEventListener('change', () => {
+            stepperMinusEl.classList.remove('stepper-btn--disabled')
+            stepperPlusEl.classList.remove('stepper-btn--disabled')
+            if (stepperInputEl.value < stepperMin) {
+                stepperMinusEl.classList.add('stepper-btn--disabled')
+                stepperInputEl.value = stepperMin;
+            }
+            if (stepperInputEl.value > stepperMax) {
+                stepperPlusEl.classList.add('stepper-btn--disabled')
+                stepperInputEl.value = stepperMax;
+            }
+        })
+
+        stepperPlusEl.addEventListener('click', () => {
+            let count = Number(stepperInputEl.value);
+            if (count < stepperMax) {
+                stepperMinusEl.classList.remove('stepper-btn--disabled')
+                stepperPlusEl.classList.remove('stepper-btn--disabled')
+                count++;
+                stepperInputEl.value = count;
+            }
+            if (count === stepperMax) {
+                stepperPlusEl.classList.add('stepper-btn--disabled')
+
+            }
+        });
+        stepperMinusEl.addEventListener('click', () => {
+            let count = Number(stepperInputEl.value);
+            if (count > stepperMin) {
+                stepperMinusEl.classList.remove('stepper-btn--disabled')
+                stepperPlusEl.classList.remove('stepper-btn--disabled')
+                count--;
+                stepperInputEl.value = count;
+            }
+            if (count === stepperMin) {
+                stepperMinusEl.classList.add('stepper-btn--disabled')
+
+            }
+        });
+    }
+</script>

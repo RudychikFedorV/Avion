@@ -7,12 +7,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
 	<link rel="icon" sizes="180x180" href="./img/favicons/icon.png">
-	<title>Avion</title>
+	<title>Product item</title>
 	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
 
+	<section class="header-delivery" id="headerDelivery">
+    <div class="container">
+        <div class="header-delivery-row">
+            <div class="header-delivery-left">
+                <div class="header-delivery-left__img">
+                    <img src="img/header/delivery.svg" alt="Icon">
+                </div>
+                <p class="header-delivery-left__desc">Free delivery on all orders over £50 with code easter checkout</p>
+            </div>
+            <div class="header-delivery-right" id="closeDelivery">
+                <img src="img/header/close.svg" alt="Icon">
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const headerDelivery = document.querySelector('#headerDelivery')
+    if (headerDelivery) {
+        const closeDelivery = headerDelivery.querySelector('#closeDelivery')
+        closeDelivery.addEventListener('click', () => {
+            headerDelivery.classList.add('close-hidden')
+        })
+    }
+</script>
 	<header class="header">
 	<div class="container">
 		<div class="header-top">
@@ -81,26 +105,140 @@
 	</div>
 </header>
 	<main class="main">
-		<section class="welcome py-60">
+		<section class="product">
     <div class="container">
-        <div class="welcome-row d-flex">
-            <div class="welcome-left">
-                <h2 class="welcome-left__title">The furniture brand for the future, with timeless designs</h2>
-                <a href="#!" class="welcome-left__btn btns btn-1">View collection</a>
-                <p class="welcome-left__desc">A&nbsp;new era in&nbsp;eco friendly furniture with Avelon, the French luxury retail brand
-                    with nice fonts, tasteful colors and a&nbsp;beautiful way to&nbsp;display things digitally
-                    using modern web technologies.
-                </p>
+        <h2 class="visually-hidden">Product</h2>
+        <div class="product-row">
+            <div class="product-left">
+                <div class="product-left__img">
+                    <img src="img/product/01.png" alt="Image" srcset="img/product/01_2x.png" width="607" height="661">
+                </div>
             </div>
-            <div class="welcome-right">
-                <div class="welcome-right__img">
-                    <img src="img/welcome/welcome-banner.png" alt="Banner" srcset="img/welcome/welcome-banner_2x.png 2x">
+            <div class="product-right">
+                <div class="product-top">
+                    <h2 class="product-top__title">The Dandy Chair</h2>
+                    <span class="product-top__price">£250</span>
+                </div>
+                <div class="product-body">
+                    <h3 class="product-body__title">Product description</h3>
+                    <p class="product-body__desc">A timeless design, with premium materials features as one of our most
+                        popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech
+                        legs and lambskin leather upholstery.
+                    </p>
+                    <h4 class="product-body__name">Dimensions</h4>
+                    <div class="product-body__block">
+                        <div class="product-body__item">
+                            <p class="product-body__item-txt1">Height</p>
+                            <p class="product-body__item-txt2">110cm</p>
+                        </div>
+                        <div class="product-body__item">
+                            <p class="product-body__item-txt1">Width</p>
+                            <p class="product-body__item-txt2">75cm</p>
+                        </div>
+                        <div class="product-body__item">
+                            <p class="product-body__item-txt1">Depth</p>
+                            <p class="product-body__item-txt2">50cm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-bottom">
+                    <h3 class="product-bottom__name">Quantitity</h3>
+                    <div class="product-bottom__stepper stepper">
+                        <button class="product-bottom__stepper-btn btn--minus stepper-btn--disabled"
+                            aria-label="Decrease quantity">-</button>
+                        <input type="namber" value="1" min="1" max="999" class="stepper-input">
+                        <button class="product-bottom__stepper-btn btn--plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="product-bottom__btns">
+                        <a href="#!" class="btns btn-3">Add to cart</a>
+                        <a href="#!" class="btns btn-4">Save to favorites</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-		<section class="benefits py-60">
+<script>
+    const stepperEl = document.querySelector('.stepper')
+
+    if (stepperEl) {
+        const stepperInputEl = document.querySelector('.stepper-input')
+        const stepperMinusEl = document.querySelector('.btn--minus')
+        const stepperPlusEl = document.querySelector('.btn--plus')
+        const stepperMin = Number(stepperInputEl.getAttribute('min'));
+        const stepperMax = Number(stepperInputEl.getAttribute('max'));
+        let count = Number(stepperInputEl.value);
+
+        stepperInputEl.addEventListener('change', () => {
+            stepperMinusEl.classList.remove('stepper-btn--disabled')
+            stepperPlusEl.classList.remove('stepper-btn--disabled')
+            if (stepperInputEl.value < stepperMin) {
+                stepperMinusEl.classList.add('stepper-btn--disabled')
+                stepperInputEl.value = stepperMin;
+            }
+            if (stepperInputEl.value > stepperMax) {
+                stepperPlusEl.classList.add('stepper-btn--disabled')
+                stepperInputEl.value = stepperMax;
+            }
+        })
+
+        stepperPlusEl.addEventListener('click', () => {
+            let count = Number(stepperInputEl.value);
+            if (count < stepperMax) {
+                stepperMinusEl.classList.remove('stepper-btn--disabled')
+                stepperPlusEl.classList.remove('stepper-btn--disabled')
+                count++;
+                stepperInputEl.value = count;
+            }
+            if (count === stepperMax) {
+                stepperPlusEl.classList.add('stepper-btn--disabled')
+
+            }
+        });
+        stepperMinusEl.addEventListener('click', () => {
+            let count = Number(stepperInputEl.value);
+            if (count > stepperMin) {
+                stepperMinusEl.classList.remove('stepper-btn--disabled')
+                stepperPlusEl.classList.remove('stepper-btn--disabled')
+                count--;
+                stepperInputEl.value = count;
+            }
+            if (count === stepperMin) {
+                stepperMinusEl.classList.add('stepper-btn--disabled')
+
+            }
+        });
+    }
+</script>
+		<section class="popular">
+    <div class="container">
+        <h2 class="products-title">Our popular products</h2>
+        <div class="popular-row">
+            <div class="products-item">
+                <div class="products-item__img">
+                    <img src="img/popular/our-01.png" alt="Image" srcset="img/popular/our-01_2x.png">
+                </div>
+                <a href="#!" class="products-item__name">The Poplar suede sofa</a>
+                <p class="products-item__price">£950</p>
+            </div>
+            <div class="products-item">
+                <div class="products-item__img">
+                    <img src="img/products/new-01.jpg" alt="Image" srcset="img/products/new-01_2x.jpg">
+                </div>
+                <a href="#!" class="products-item__name">The Dandy chair</a>
+                <p class="products-item__price">£250</p>
+            </div>
+            <div class="products-item">
+                <div class="products-item__img">
+                    <img src="img/popular/our-03.png" alt="Image" srcset="img/popular/our-03_2x.png">
+                </div>
+                <a href="#!" class="products-item__name">The Dandy chair</a>
+                <p class="products-item__price">£250</p>
+            </div>
+        </div>
+    </div>
+</section>
+		<section class="benefits benefits-v2 py-60">
     <div class="container">
         <h3 class="benefits-title text-center">What makes our brand different</h3>
         <div class="benefits-row">
@@ -135,70 +273,6 @@
         </div>
     </div>
 </section>
-		<section class="products">
-    <div class="container">
-        <h2 class="products-title">New ceramics</h2>
-        <div class="products-row">
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-01.jpg" alt="Image" srcset="img/products/new-01_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-02.jpg" alt="Image" srcset="img/products/new-02_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-03.jpg" alt="Image" srcset="img/products/new-03_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-04.jpg" alt="Image" srcset="img/products/new-04_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-        </div>
-        <a href="#!" class="products-btn btns btn-2">View collection</a>
-    </div>
-</section>
-		<section class="popular">
-    <div class="container">
-        <h2 class="products-title">Our popular products</h2>
-        <div class="popular-row">
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/popular/our-01.png" alt="Image" srcset="img/popular/our-01_2x.png">
-                </div>
-                <a href="#!" class="products-item__name">The Poplar suede sofa</a>
-                <p class="products-item__price">£950</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/products/new-01.jpg" alt="Image" srcset="img/products/new-01_2x.jpg">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-            <div class="products-item">
-                <div class="products-item__img">
-                    <img src="img/popular/our-03.png" alt="Image" srcset="img/popular/our-03_2x.png">
-                </div>
-                <a href="#!" class="products-item__name">The Dandy chair</a>
-                <p class="products-item__price">£250</p>
-            </div>
-        </div>
-    </div>
-</section>
 		<section class="subscription py-60">
     <div class="container">
         <div class="subscription-row">
@@ -213,28 +287,6 @@
         </div>
     </div>
 </section>
-		<div class="about">
-    <div class="container">
-        <div class="about-row d-flex">
-            <div class="about-left">
-                <h3 class="about-left__title">Our service isn’t just personal, it’s actually
-                    hyper personally exquisite
-                </h3>
-                <p class="about-left__desc">When we started Avion, the idea was simple. Make high quality furniture
-                    affordable and available for the mass market.<br><br>
-                    Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our
-                    Chelsea boutique become the hotbed for the London interior design community.
-                </p>
-                <a href="about.html" class="about-left__btn btns btn-2">View collection</a>
-            </div>
-            <div class="about-right">
-                <div class="about-right__img">
-                    <img src="img/about-v2/v2.png" alt="Image" srcset="img/about-v2/v2_2x.png">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 	</main>
 	<footer class="footer">
 	<div class="container">
@@ -360,7 +412,7 @@
 </footer>
 
 	<script src="./js/index.bundle.js"></script>
-	
+
 </body>
 
 </html>
