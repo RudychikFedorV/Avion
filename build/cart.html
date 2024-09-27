@@ -2,34 +2,18 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
-	<link rel="icon" sizes="180x180" href="./img/favicons/icon.png">
-	<title>About</title>
-	<link rel="stylesheet" href="./css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+    <link rel="icon" sizes="180x180" href="./img/favicons/icon.png">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
 
-	<section class="header-delivery" id="headerDelivery">
-    <div class="container">
-        <div class="header-delivery-row">
-            <div class="header-delivery-left">
-                <div class="header-delivery-left__img">
-                    <img src="img/header/delivery.svg" alt="Icon">
-                </div>
-                <p class="header-delivery-left__desc">Free delivery on all orders over £50 with code easter checkout</p>
-            </div>
-            <div class="header-delivery-right" id="closeDelivery">
-                <img src="img/header/close.svg" alt="Icon">
-            </div>
-        </div>
-    </div>
-</section>
-
-	<header class="header">
+    <header class="header">
 	<div class="container">
 		<div class="header-top">
 			<div class="header-top__left">
@@ -96,112 +80,76 @@
 		</nav>
 	</div>
 </header>
-	<main class="main">
-		<section class="hero">
+    <main class="main">
+        <section class="cart">
     <div class="container">
-        <div class="hero-row">
-            <div class="hero-left">
-                <h2 class="hero-left__title">A brand built on the love of craftmanship,<br>
-                    quality and outstanding customer service
-                </h2>
+        <h2 class="visually-hidden">Cart</h2>
+        <div class="cart-row">
+            <div class="cart-table">
+                <div class="cart-content cart-grid--content">
+                    <h3 class="cart-col">Product</h3>
+                    <h3 class="cart-col cart-quantity">Quantity</h3>
+                    <h3 class="cart-col cart-total">Total</h3>
+                </div>
+                <div class="cart-content cart-grid--info">
+                    <div class="cart-col cart-img">
+                        <img src="img/products/new-04.jpg" alt="Image" srcset="img/products/new-04_2x.jpg" width="109"
+                            height="134">
+                    </div>
+                    <div class="cart-col cart-info">
+                        <h2 class="cart-col__title">Graystone vase</h2>
+                        <p class="cart-col__desc">A timeless ceramic vase with a tri color grey glaze.</p>
+                        <p class="cart-col__price">£85</p>
+                    </div>
+                    <div class="cart-col cart-quantity">
+                        <div class="product-bottom__stepper stepper cart--stepper">
+                            <button class="product-bottom__stepper-btn btn--minus stepper-btn--disabled"
+                                aria-label="Decrease quantity">-</button>
+                            <input type="namber" value="1" min="1" max="999" class="stepper-input">
+                            <button class="product-bottom__stepper-btn btn--plus"
+                                aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-col cart-total">
+                        <span class="cart-col__price">£85</span>
+                    </div>
+                </div>
+                <div class="cart-content cart-grid--info">
+                    <div class="cart-col cart-img">
+                        <img src="img/products/new-04.jpg" alt="Image" srcset="img/products/new-04_2x.jpg" width="109"
+                            height="134">
+                    </div>
+                    <div class="cart-col cart-info">
+                        <h2 class="cart-col__title">Graystone vase</h2>
+                        <p class="cart-col__desc">A timeless ceramic vase with a tri color grey glaze.</p>
+                        <p class="cart-col__price">£85</p>
+                    </div>
+                    <div class="cart-col cart-quantity">
+                        <div class="product-bottom__stepper stepper cart--stepper">
+                            <button class="product-bottom__stepper-btn btn--minus stepper-btn--disabled"
+                                aria-label="Decrease quantity">-</button>
+                            <input type="namber" value="1" min="1" max="999" class="stepper-input">
+                            <button class="product-bottom__stepper-btn btn--plus"
+                                aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-col cart-total">
+                        <span class="cart-col__price">£85</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-right">
-                <a href="#!" class="hero-right__btn btns btn-2">View our products</a>
+            <div class="cart-bottom">
+                <div class="cart-block">
+                    <p class="cart-block__txt">Taxes and shipping are calculated at checkout</p>
+                    <p class="cart-block__price">Subtotal <span>£210</span></p>
+                </div>
+                <a href="#!" class="btns btn-3">Go to checkout</a>
             </div>
         </div>
     </div>
 </section>
-		<section class="welcome welcome-v2 py-60">
-    <div class="container">
-        <div class="welcome-v2-row d-flex">
-            <div class="welcome-left">
-                <h2 class="welcome-left__title">It started with a small idea</h2>
-                <p class="welcome-left__desc">A global brand with local beginnings, our story begain in a small studio
-                    in South London in early 2014
-                </p>
-                <a href="#!" class="welcome-left__btn btns btn-1">View collection</a>
-            </div>
-            <div class="welcome-right">
-                <div class="welcome-right__img">
-                    <img src="img/welcome-v2/v2.png" alt="Banner"
-                        srcset="img/welcome-v2/v2_2x.png 2x">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-		<div class="about about-v2">
-    <div class="container">
-        <div class="about-row d-flex">
-            <div class="about-left">
-                <h3 class="about-left__title">From a studio in London to a global brand with over 400 outlets</h3>
-                <p class="about-left__desc">When we started Avion, the idea was simple. Make high quality furniture
-                    affordable and available for the mass market. <br><br>
-                    Handmade, and lovingly crafted furniture and homeware is what we live,
-                    breathe and design so our Chelsea boutique become the hotbed for the London interior design
-                    community.
-                </p>
-                <a href="#!" class="about-left__btn btns btn-2">Get in touch</a>
-            </div>
-            <div class="about-right">
-                <div class="about-right__img">
-                    <img src="img/about/image.png" alt="Image" srcset="img/about/image_2x.png">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-		<section class="benefits benefits-v2 py-60">
-    <div class="container">
-        <h3 class="benefits-title text-center">What makes our brand different</h3>
-        <div class="benefits-row">
-            <div class="benefits-item">
-                <div class="benefits-item__img">
-                    <img src="img/benefits/delivery.svg" alt="Icon">
-                </div>
-                <h3 class="benefits-item__title">Next day as standard</h3>
-                <p class="benefits-item__desc">Order before 3pm and get your order the next day as standard</p>
-            </div>
-            <div class="benefits-item">
-                <div class="benefits-item__img">
-                    <img src="img/benefits/checkmark--outline.svg" alt="Icon">
-                </div>
-                <h3 class="benefits-item__title">Made by true artisans</h3>
-                <p class="benefits-item__desc">Handmade crafted goods made with real passion and craftmanship</p>
-            </div>
-            <div class="benefits-item">
-                <div class="benefits-item__img">
-                    <img src="img/benefits/purchase.svg" alt="Icon">
-                </div>
-                <h3 class="benefits-item__title">Unbeatable prices</h3>
-                <p class="benefits-item__desc">For our materials and quality you won’t find better prices anywhere</p>
-            </div>
-            <div class="benefits-item">
-                <div class="benefits-item__img">
-                    <img src="img/benefits/sprout.svg" alt="Icon">
-                </div>
-                <h3 class="benefits-item__title">Recycled packaging</h3>
-                <p class="benefits-item__desc">We use 100% recycled packaging to ensure our footprint is manageable</p>
-            </div>
-        </div>
-    </div>
-</section>
-		<section class="subscription py-60">
-    <div class="container">
-        <div class="subscription-row">
-            <h2 class="subscription-title">Join the club and get the benefits</h2>
-            <p class="subscription-desc">Sign up for our newsletter and receive exclusive offers on new ranges, sales,
-                pop up stores and more
-            </p>
-            <form class="subscription-form">
-                <input type="email" name="email" placeholder="your@email.com" required>
-                <button class="subscription-form__btn btns btn-3">Sign up</button>
-            </form>
-        </div>
-    </div>
-</section>
-	</main>
-	<footer class="footer">
+    </main>
+    <footer class="footer">
 	<div class="container">
 		<div class="footer-row">
 			<div class="footer-top d-flex">
@@ -324,7 +272,7 @@
 	</div>
 </footer>
 
-	<script src="./js/index.bundle.js"></script>
+    <script src="./js/index.bundle.js"></script>
 
 </body>
 
