@@ -1,0 +1,33 @@
+<form class="user" id="myUserLogin">
+    <span class="user-close">&times;</span>
+    <div class="user-top">
+        <button class="user-top__btn active-black login-btn">Login</button>
+        <button class="user-top__btn active-white login-btn" id="myBtnRegistration">Registration</button>
+    </div>
+    <div class="user-body">
+        <input type="email" class="user-body__input" required placeholder="Enter your email address">
+        <input type="password" class="user-body__input" required placeholder="Enter your password">
+        <button class="user-body__btn active-black login-btn">Log in</button>
+    </div>
+    <div class="user-footer">
+        <a href="#!" class="user-footer__link" id="ForgotYourPassword">Forgot your password?</a>
+    </div>
+</form>
+
+<script>
+    const myUserLogin = document.querySelector("#myUserLogin");
+    const userLogin = document.querySelector("#userLogin");
+    const spanClose = document.querySelector(".user-close");
+
+    userLogin.onclick = () => {
+        myUserLogin.style.display = "block";
+    };
+    spanClose.onclick = () => {
+        myUserLogin.style.display = "none";
+    };
+    window.onclick = (event) => {
+        if (event.target == myUserLogin) {
+            myUserLogin.style.display = "none";
+        }
+    };
+</script>
