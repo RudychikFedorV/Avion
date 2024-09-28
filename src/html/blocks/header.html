@@ -21,20 +21,21 @@
 					</ul>
 				</nav>
 				<div class="header-top__social">
-					<a href="#!" class="header-top__social-icon">
+					<button class="header-top__social-button search-icon" onclick="mySearchModal()">
 						<img src="img/header/search.svg" alt="Icon">
-					</a>
+					</button>
 					<a href="cart.html" class="header-top__social-icon">
 						<img src="img/header/cart.svg" alt="Icon">
 					</a>
-					<a href="#!" class="header-top__social-icon">
+					<button class="header-top__social-button user-icon">
 						<img src="img/header/user.svg" alt="Icon">
-					</a>
+					</button>
 				</div>
 				@@include('burger.html')
-				
+
 			</div>
 		</div>
+		@@include('search.html')
 	</div>
 	<div class="header-bottom">
 		<nav class="header-bottom__nav">

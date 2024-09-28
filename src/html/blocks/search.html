@@ -1,0 +1,50 @@
+<div class="search" id="mySearchBlock">
+    <div class="container">
+        <div class="search-row">
+            <div class="search-container">
+                <div class="search-container__icon">
+                    <img src="img/header/search.svg" alt="Search">
+                </div>
+                <input type="text" onkeyup="mySearch()" id="myInputSearch" placeholder="Search ...">
+                <span class="search-container__close" onclick="mySearchClose()">&times;</span>
+            </div>
+            <div class="search-content" id="myContent">
+                @@loop('products-content.html', '../data/products.json')
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const mySearchModal = () => {
+        const mySearchBlock = document.querySelector("#mySearchBlock");
+        if (mySearchBlock.style.display === "none") {
+            mySearchBlock.style.display = "block";
+        } else {
+            mySearchBlock.style.display = "none";
+        }
+    }
+    const mySearchClose = () => {
+        const mySearchBlock = document.querySelector("#mySearchBlock");
+        if (mySearchBlock.style.display === "block") {
+            mySearchBlock.style.display = "none";
+        }
+    }
+
+    const mySearch = () => {
+        let a;
+        let index;
+        let input = document.querySelector("#myInputSearch");
+        let filter = input.value.toUpperCase();
+        let ul = document.querySelector("#myContent");
+        let li = ul.getElementsByTagName("li");
+
+        for (let index = 0; index < li.length; index++) {
+            a = li[index].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[index].style.display = "";
+            } else {
+                li[index].style.display = "none";
+            }
+        }
+    };
+</script>

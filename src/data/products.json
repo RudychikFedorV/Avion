@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "IMG": "01",
+    "name": "The Dandy chair",
+    "price": "£250",
+    "link": "#!"
+  },
+  {
+    "id": 2,
+    "IMG": "02",
+    "name": "Rustic Vase Set",
+    "price": "£155",
+    "link": "#!"
+  },
+  {
+    "id": 3,
+    "IMG": "03",
+    "name": "The Silky Vase",
+    "price": "£125",
+    "link": "#!"
+  },
+  {
+    "id": 4,
+    "IMG": "04",
+    "name": "The Lucy Lamp",
+    "price": "£120",
+    "link": "#!"
+  },
+  {
+    "id": 5,
+    "IMG": "01",
+    "name": "The Dandy chair",
+    "price": "£250",
+    "link": "#!"
+  },
+  {
+    "id": 6,
+    "IMG": "02",
+    "name": "Rustic Vase Set",
+    "price": "£155",
+    "link": "#!"
+  },
+  {
+    "id": 7,
+    "IMG": "03",
+    "name": "The Silky Vase",
+    "price": "£125",
+    "link": "#!"
+  },
+  {
+    "id": 8,
+    "IMG": "04",
+    "name": "The Lucy Lamp",
+    "price": "£120",
+    "link": "#!"
+  }
+]
