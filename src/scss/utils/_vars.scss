@@ -2,6 +2,7 @@
   --font-family: "Satoshi", sans-serif;
   --second-family: "Clash Display", sans-serif;
   --transition: 0.2s all ease-in-out;
+  --transition-2: 0.3s all ease-in-out;
 
   --dark-primary: #2a254b;
   --primary: #4e4d93;
@@ -38,5 +39,7 @@
   --txt-400-14-100-ff: 400 14px / 100% var(--font-family);
 
   --outline: 2px dashed currentColor;
+  --outline-3: 2px dashed #726e8d;
+  --outline-4: 2px dashed #fff;
   --outline-offset: 3px;
 }

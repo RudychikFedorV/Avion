@@ -20,7 +20,7 @@
     width: 100%;
     padding: 10px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition);    
     &:hover {
       box-shadow: var(--c-box-shadow);
       background-color: var(--light-grey);
@@ -33,6 +33,7 @@
     @include mobile {
       width: 100%;
     }
+    
     &__img {
       width: 24px;
       height: 24px;

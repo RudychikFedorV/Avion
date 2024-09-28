@@ -7,16 +7,25 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    @include mobile {
+      padding: 24px 5px;
+    }
   }
   &-title {
     font: var(--txt-400-36-140-sf);
     color: var(--dark-primary);
     margin-bottom: 15px;
+    @include mobile {
+      font: var(--txt-400-20-140-sf);
+    }
   }
   &-desc {
     font: var(--txt-400-16-150-ff);
     color: var(--dark-primary);
     margin-bottom: 70px;
+    @include mobile {
+      font: var(--txt-400-14-150-ff);
+    }
   }
   &-form {
     display: flex;
@@ -31,9 +40,30 @@
 
       font: var(--txt-400-16-100-ff);
       color: var(--dark-primary);
+      @include mobile {
+        font: var(--txt-400-14-100-ff);
+        padding: 15px;
+      }
       &::placeholder {
         font: var(--txt-400-16-100-ff);
         color: var(--c-color-2);
+        @include mobile {
+          font: var(--txt-400-14-100-ff);
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      &:focus-visible {
+        outline: var(--outline-2);
+        outline-offset: var(--outline-offset);
+      }
+    }
+    .btn-3 {
+      @include mobile {
+        font: var(--txt-400-14-150-ff);
+        padding: 15px;
+        max-width: 80px;
       }
     }
   }

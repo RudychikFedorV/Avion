@@ -1,21 +1,32 @@
 .welcome-v2 {
   &-row {
     gap: 16px;
+    @include tablet {
+      flex-direction: column;
+    }
   }
-  .welcome-left {
-    max-width: 634px;
-    width: 100%;
+}
+
+.welcome-v2 .welcome-left {
+  max-width: 634px;
+  width: 100%;
+  @include tablet{
+    max-width: inherit;
   }
-  .welcome-right {
-    max-width: 630px;
-    width: 100%;
+}
+.welcome-v2 .welcome-right {
+  max-width: 630px;
+  width: 100%;
+  @include tablet{
+    display: block;
+    max-width: inherit;
   }
- 
-  .welcome-left__desc {
-    margin-top: 0;
-    margin-bottom: auto;
-  }
-  .welcome-left__btn {
-    margin-bottom: inherit;
-  }
+}
+.welcome-v2 .welcome-left__desc {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.welcome-v2 .welcome-left__btn {
+  margin-top: 20px;
+  margin-bottom: inherit;
 }

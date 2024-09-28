@@ -9,6 +9,39 @@ if (headerDelivery) {
   });
 }
 
+const burgerEl = document.querySelector(".burger");
+if (burgerEl) {
+  const menuEl = document.querySelector(".header-bottom");
+  const body = document.body;
+  burgerEl.addEventListener("click", () => {
+    burgerEl.classList.toggle("burger--active");
+    menuEl.classList.toggle("header-bottom--active");
+    body.classList.toggle("stop-scroll");
+  });
+}
+
+const filtersBtnEl = document.querySelector(".filters-btn");
+if (filtersBtnEl) {
+  const filtersEl = document.querySelector(".catalog-filter");
+  filtersBtnEl.addEventListener("click", () => {
+    filtersBtnEl.classList.toggle("btn-filter--active");
+    filtersEl.classList.toggle("filter--active");
+  });
+}
+
+const headerTopList = document.querySelector(".header-top__list");
+if (headerTopList) {
+  new TransferElements({
+    sourceElement: headerTopList,
+    breakpoints: {
+      768: {
+        targetElement: document.querySelector(".header-bottom"),
+        targetPosition: 1,
+      },
+    },
+  });
+}
+
 const stepperEls = document.querySelectorAll(".stepper");
 if (stepperEls) {
   stepperEls.forEach((stepperEl) => {

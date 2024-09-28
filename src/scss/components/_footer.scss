@@ -1,16 +1,31 @@
 .footer {
   background: var(--dark-primary);
   padding: 60px 0 25px;
+
   //footer-top
   &-top {
     padding-bottom: 50px;
     border-bottom: 1px solid var(--primary);
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
     &-left {
       width: 50%;
       display: flex;
       justify-content: space-between;
       gap: 20px;
       padding-right: 50px;
+      @include tablet {
+        width: 100%;
+        justify-content: space-around;
+      }
+      @include mobile-small {
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 40px;
+      }
       &__name {
         font: var(--txt-400-16-100-sf);
         color: var(--white);
@@ -35,6 +50,12 @@
     }
     &-right {
       width: 50%;
+      @include tablet {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       &__desc {
         font: var(--txt-400-16-100-sf);
         color: var(--white);
@@ -47,6 +68,13 @@
             color: var(--white);
           }
         }
+        .btn-4{
+          @include mobile {
+            font: var(--txt-400-14-150-ff);
+            padding: 15px;
+            max-width: 80px;
+          }
+        }
       }
     }
   }
@@ -57,6 +85,9 @@
     align-items: center;
     gap: 20px;
     padding: 22px 0;
+    @include tablet {
+      flex-direction: column;
+    }
     &-left {
       &__copyright {
         font: var(--txt-400-14-100-ff);
@@ -74,6 +105,13 @@
         width: 100%;
         height: 18px;
         transition: var(--transition);
+        &:focus {
+          outline: none;
+        }
+        &:focus-visible {
+          outline: var(--outline-4);
+          outline-offset: var(--outline-offset);
+        }
         img {
           display: block;
           width: 100%;

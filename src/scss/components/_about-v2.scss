@@ -1,10 +1,16 @@
 .about-v2 {
   .about-row {
     flex-direction: row-reverse;
+    @include tablet {
+      flex-direction: column;
+    }
   }
   .about-left {
     padding-left: 60px;
     background-color: var(--light-grey);
+    @include mobile {
+      padding: 32px 0;
+    }
   }
   .btn-2 {
     border: 1px solid var(--dark-primary);

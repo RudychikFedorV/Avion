@@ -1,7 +1,23 @@
 .benefits-v2 {
+  .benefits-row{
+    @include tablet{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile-small{
+      grid-template-columns: 1fr;
+    }
+  }
   .benefits-item {
     padding: 48px;
     background: var(--light-grey);
     max-width: 305px;
+    @include tablet{
+      width: 100%;
+      max-width: inherit;
+    }
+    @include mobile{
+      padding: 20px;
+    }
   }
 }

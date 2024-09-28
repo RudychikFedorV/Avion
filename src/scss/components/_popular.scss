@@ -5,14 +5,23 @@
     @include tablet {
       flex-wrap: wrap;
     }
+    @include mobile-small {
+      gap: 10px;
+    }
   }
-  .products-item {
-    @include tablet {
-      &:nth-child(2n) {
-        width: calc(50% - 10px);
+}
+.popular .products-item {
+  @include tablet {
+    &:nth-child(2n) {
+      width: calc(50% - 10px);
+      @include mobile-small {
+        width: calc(50% - 5px);
       }
-      &:nth-child(3n) {
-        width: calc(50% - 10px);
+    }
+    &:nth-child(3n) {
+      width: calc(50% - 10px);
+      @include mobile-small {
+        width: calc(50% - 5px);
       }
     }
   }

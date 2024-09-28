@@ -4,9 +4,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @include mobile{
+    height: 146px;
+  }
   &-row {
     position: relative;
     height: 209px;
+    @include mobile{
+      height: 146px;
+    }
   }
   &-title {
     position: absolute;
@@ -14,5 +20,13 @@
     bottom: 36px;
     font: var(--txt-400-36-140-sf);
     color: var(--white);
+    white-space: nowrap;
+    @include tablet-small{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include mobile{
+      bottom: 32px;
+    }
   }
 }
